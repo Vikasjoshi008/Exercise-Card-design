@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animations</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 80vw;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(78, 78, 212);
+            animation: rotate 0.3s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                /* transform: rotate(0deg); */
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                /* transform: rotate(360deg); */
+                transform: translateY(0);
+            }
+        }
+
+        /* @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
